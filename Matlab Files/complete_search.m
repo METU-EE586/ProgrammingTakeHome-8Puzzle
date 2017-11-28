@@ -1,28 +1,132 @@
-function [pathToGoal] = complete_search(startState, method)
+clear;
+clc;
 
-% First check if the input state can be solved or not
-% if ~issolvable(startState)
-%     error("Puzzle with specified starting state can not be solved");
+% %% COMPLETE SEARCH
+% % 
+% % % INITIALIZE VARIABLES
+% method = 'A*';
+% mode= "complete"; % It is a complete search
+% numStep = 10; % MC Parameter
+% numPuzzle = 10; % MC Parameter
+% goalState = [1:8 0]'; % will be defined by user
+% numTiles = length(goalState); % Total number of tiles in the puzzle
+% 
+% aveNumMoves = 0; % Average number of moves in the solution
+% aveNumVisitedNodes = 0; % Average number of expanded nodes
+% aveAllocatedMemory = 0; % Average of allocated memory
+% aveTimeElapsed = 0;
+% 
+% 
+% % Produce random start states
+% startStateMatrix = produce_random_puzzle(goalState, numStep, numPuzzle);
+% 
+% for iRun = 1:numPuzzle
+%     % Construct node to start the search
+%     startState = startStateMatrix(:, iRun);
+%     if strcmp(method, 'A*')
+%         startNode = [startState; 1; 0; 0; 0; 0]; % = [state; nodeID; predecessorID; cost; heuristic; f]
+%     else
+%         startNode = [startState; 1; 0; 0]; % = [state; nodeID; predecessorID; totalCost]
+%     end
+%     
+%     switch method
+%         case 'Breadth First'
+%             queue = startNode; % Enqueue startNode
+%             visitedNodes = []; % Initialize visited nodes as an empty set
+%             
+%             [visitedNodes, queue, timeElapsed] = breadth_first_search(goalState, mode, queue, visitedNodes);
+%             
+%         case 'Depth First'
+%             stack = startNode; % Enqueue startNode
+%             visitedNodes = []; % Initialize visited nodes as an empty set
+%             
+%             [visitedNodes, stack, timeElapsed] = depth_first_search(goalState, mode, stack, visitedNodes);
+%             
+%         case 'Iterative Deepening'
+%             stack = startNode; % Enqueue startNode
+%             visitedNodes = []; % Initialize visited nodes as an empty set
+%             
+%             [visitedNodes, stack, timeElapsed] = iterative_deepening_search(goalState, mode, stack, visitedNodes);
+%             
+%         case 'A*'
+%             queue = startNode; % Enqueue startNode
+%             visitedNodes = []; % Initialize visited nodes as an empty set
+%             heuristicType = 'Heuristic Manhattan';
+%             
+%             [visitedNodes, queue, timeElapsed] = a_star_search(goalState, mode, queue, visitedNodes, heuristicType);
+%             
+%     end
+%     
+%     % Construct the path to the goal
+%     pathToGoal = construct_path(visitedNodes, numTiles);
+%     
+%     % Investigate analytics
+%     numMovesInSolution = size(pathToGoal, 2) - 1;
+%     numVisitedNodes = size(visitedNodes,2);
+%     memoryAllocated = numVisitedNodes + size(queue,2);
+% %     memoryAllocated = numVisitedNodes + size(stack,2);
+%     
+%     % Sum these up to average later on
+%     aveNumMoves = aveNumMoves + numMovesInSolution;
+%     aveNumVisitedNodes = aveNumVisitedNodes + numVisitedNodes;
+%     aveAllocatedMemory = aveAllocatedMemory + memoryAllocated;
+%     aveTimeElapsed = aveTimeElapsed + timeElapsed;
 % end
+% 
+% % Calculate avereges
+% aveNumMoves = aveNumMoves/ numPuzzle;
+% aveNumVisitedNodes = aveNumVisitedNodes/ numPuzzle;
+% aveAllocatedMemory = aveAllocatedMemory/ numPuzzle;
+% aveTimeElapsed = aveTimeElapsed/ numPuzzle;
 
-numTiles = length(startState); % Total number of tiles in the puzzle
-goalState = [(1:numTiles-1) 0]'; % Define the goal state
 
-switch method
-    case 'Breadth First'
-        [pathToGoal, numExploredNodes, memoryUsage] = breadth_first_search(startState, goalState);
-        
-    case 'Depth First'
-        [pathToGoal, numExploredNodes, memoryUsage] = depth_first_search(startState, goalState);
-        
-    case 'Iterative Deepening'
-        [pathToGoal, numExploredNodes, memoryUsage] = iterative_deepening_search(startState, goalState);
-        
-    case 'A*'
-        [pathToGoal, numExploredNodes, memoryUsage] = a_star_search(startState, goalState, 'Heuristic Manhattan');
-        
-    otherwise
-        warning('An undefined search algorithm is selected.');
-        
+%% SINGLE STEP SEARCH
+
+% % INITIALIZE VARIABLES
+method = 'A*';
+mode= 'single_step'; % It is a complete search
+numStep = 5; % MC Parameter
+numPuzzle = 1; % MC Parameter
+goalState = [1:8 0]'; % will be defined by user
+numTiles = length(goalState); % Total number of tiles in the puzzle
+
+numIterations = 0;
+
+% Produce a random start state
+startState = produce_random_puzzle(goalState, numStep, numPuzzle);
+
+if strcmp(method, 'A*')
+    startNode = [startState; 1; 0; 0; 0; 0]; % = [state; nodeID; predecessorID; cost; heuristic; f]
+else
+    startNode = [startState; 1; 0; 0]; % = [state; nodeID; predecessorID; totalCost]
 end
+
+queue = startNode; % Enqueue startNode
+stack = startNode; % Enqueue startNode
+visitedNodes = []; % Initialize visited nodes as an empty set
+
+while ~all((stack(1:numTiles, 1) == goalState))
+    numIterations = numIterations + 1;
+    
+    switch method
+        case 'Breadth First'
+            
+            [visitedNodes, queue, ~] = breadth_first_search(goalState, mode, queue, visitedNodes);
+            
+        case 'Depth First'
+            
+            [visitedNodes, stack, ~] = depth_first_search(goalState, mode, stack, visitedNodes);
+            
+        case 'Iterative Deepening'
+            
+            [visitedNodes, stack, ~] = iterative_deepening_search(goalState, mode, stack, visitedNodes);
+            
+        case 'A*'
+            
+            heuristicType = 'Heuristic Manhattan';
+            
+            [visitedNodes, queue, timeElapsed] = a_star_search(goalState, mode, queue, visitedNodes, heuristicType);
+    end
 end
+
+pathToGoal = construct_path(visitedNodes, numTiles);

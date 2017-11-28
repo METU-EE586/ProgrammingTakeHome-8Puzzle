@@ -1,52 +1,57 @@
-function [pathToGoal, numExploredNodes, memoryUsage] = breadth_first_search(startState, goalState)
+function [visitedNodes, queue, timeElapsed] = breadth_first_search(goalState, mode, prevQueue, prevVisitedNodes)
 % This function realizes Breadth First Search algorithm.
-
-% "startState, goalState" are column vectors representing the state of the
-    ...puzzle for initial and goal configurations, respectively. 
-
-% "pathToGoal" is sequence of configurations starting from startState
-    ...ending up goalState. Each column_i of this matrix is the corresponding
-    ...configuration of the puzzle at corresponding iteration
-
-% "numExploredNodes" is the total number of nodes processed by the algorithm
-	...to reach goal state. 
         
-% "MemoryUsage" is a column array of size equal to the total number of iterations.
-    ...At each iteration, total number of stored nodes (visited + queued/stacked)
-    ...recorded in this array.
+% goalState" is a column vector respresenting goal configuration.
+    
+% "mode": can take values of 'single_step' or 'complete'
+    ...'single_step': take one step and returns
+    ...'complete': tries to solve the puzzle completely.
+    
+% "prevQueue": is the last snapshot of the queue.
+
+% "prevVisitedNodes": is the last snapshot of the visitedNodes.
 
 % INITIALIZE VARIABLES
-numTiles = length(startState); % Total number of tiles in the puzzle
-idTobeAssigned = 1;
+visitedNodes = prevVisitedNodes; % It will be used to store visited nodes
+queue = prevQueue;
+numTiles = length(goalState); % Total number of tiles in the puzzle
+timeElapsed = 0;
 
-startNode = [startState; idTobeAssigned; 0; 0]; % = [state; nodeID; predecessorID; totalCost]
-idTobeAssigned = idTobeAssigned + 1; % Update the id to be assigned to the next nod
-
-queue = startNode; % Enqueue startNode
-visitedNodes = zeros(numTiles+3, 1); % It will be used to store visited nodes
-memoryUsage = [];
+%Find the ID number to be assigned
+if isempty(visitedNodes)
+    idAssignedLast = max(queue(numTiles+1,:));
+else
+    idAssignedLast = max([visitedNodes(numTiles+1, :) queue(numTiles+1,:)]);    
+end
+idTobeAssigned = idAssignedLast + 1; % Update the id to be assigned to the next node
 
 
 % MAIN LOOP
 % Loop until the queue is empty
 % Note also that when the goal state is discovered, the loop will be terminated (by an if-statement)
+tic;
+iIteration = 0;
 while (~isempty(queue))
-    % Record the number of stored variables
-    memoryUsage = [memoryUsage; size(queue,2) + size(visitedNodes,2)]; 
     
+    % If the mode is 'single_step', then stop search after one iteration
+    if strcmp(mode, 'single_step') && (iIteration == 1)
+        return;
+    end
+   
     % Dequeue parentNode
     parentNode = queue(:,1);
     queue(:,1) = [];
+    
+    % Add parentNode into visitedNodes
+    visitedNodes = [visitedNodes parentNode];
     
     % Investigate details of the parent node
     parentID = parentNode(numTiles+1);
     parentCost = parentNode(numTiles+3);
  
-    % When the algorithm reaches the goal state, produce the path and return
-    if (parentNode(1:numTiles) == goalState)        
-        pathToGoal = construct_path(parentNode, visitedNodes, numTiles);
-        
-        numExploredNodes = size(visitedNodes, 2) - 1;
+    % When the algorithm reaches the goal state, return
+    if all(parentNode(1:numTiles) == goalState)                            
+        timeElapsed = toc;
         return;
     end
     
@@ -73,10 +78,8 @@ while (~isempty(queue))
             % bigger than that of all previously visited nodes.
             
         end
-    end
-    
-    % Add parentNode into visitedNodes
-    visitedNodes = [visitedNodes parentNode];
+    end    
+    iIteration = iIteration + 1;
 end
 
 % Issues an error since the queue is empty and a solution could not be obtained

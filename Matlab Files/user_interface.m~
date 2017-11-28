@@ -511,12 +511,32 @@ curAllocMemory = size(visitedNodes, 2) + size(queue_stack,2);
 set(handles.resultSRAllocMemory,'string',num2str(curAllocMemory));
 set(handles.resultSRNumIteration,'string',num2str(numIterations));
 
-handles.visitedNodes = visitedNodes;
-handles.queue_stack = queue_stack;
-handles.numIterations = numIterations;
+if isStopButton % User stops the simulation
+    handles.visitedNodes = [];
+    handles.queue_stack = [];
+    handles.numIterations = 0;
+    % Clear the image
+    
+elseif isPauseButton % User pauses the simulation
+    handles.visitedNodes = visitedNodes;
+    handles.queue_stack = queue_stack;
+    handles.numIterations = numIterations;
+else
+    % Search is accomplished
+    handles.visitedNodes = [];
+    handles.queue_stack = [];
+    handles.numIterations = 0;
+end
 
 % Update handles structure
 guidata(hObject, handles);
+
+
+
+
+
+
+
 
 function RandInitialDistanceEdit_Callback(hObject, eventdata, handles)
 % hObject    handle to RandInitialDistanceEdit (see GCBO)
@@ -860,7 +880,3 @@ function SRPause_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of SRPause
-
-function printPuzzle(axisHandle, currentState)
-    
-

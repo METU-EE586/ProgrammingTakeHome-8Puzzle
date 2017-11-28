@@ -1,38 +1,44 @@
-function [pathToGoal, numExploredNodes, memoryUsage] = a_star_search(startState, goalState, heuristicType)
+function [visitedNodes, queue, timeElapsed] = a_star_search(goalState, mode, prevQueue, prevVisitedNodes, heuristicType)
 % This function realizes A* Search algorithm.
 
-% "startState, goalState" are column vectors representing the state of the
-    ...puzzle for initial and goal configurations, respectively. 
+% goalState" is a column vector respresenting goal configuration.
 
-% "pathToGoal" is sequence of configurations starting from startState
-    ...ending up goalState. Each column_i of this matrix is the corresponding
-    ...configuration of the puzzle at corresponding iteration
+% "mode": can take values of 'single_step' or 'complete'
+...'single_step': take one step and returns
+    ...'complete': tries to solve the puzzle completely.
+    
+% "prevStack": is the last snapshot of the stack.
 
-% "numExploredNodes" is the total number of nodes processed by the algorithm
-	...to reach goal state. 
-        
-% "MemoryUsage" is a column array of size equal to the total number of iterations.
-    ...At each iteration, total number of stored nodes (visited + queued/stacked)
-    ...recorded in this array.
+% "prevVisitedNodes": is the last snapshot of the visitedNodes.
+
+% "heuristic_type": 'Heuristic Manhattan' or 'Heuristic Misplaced'
 
 % INITIALIZE VARIABLES
-numTiles = length(startState); % Total number of tiles in the puzzle
-idTobeAssigned = 1;
+visitedNodes = prevVisitedNodes; % It will be used to store visited nodes
+queue = prevQueue;
+numTiles = length(goalState); % Total number of tiles in the puzzle
+timeElapsed = 0;
 
-startNode = [startState; idTobeAssigned; 0; 0; 0; 0]; % = [state; nodeID; predecessorID; totalCost]
-idTobeAssigned = idTobeAssigned + 1; % Update the id to be assigned to the next nod
-
-queue = startNode; % Enqueue startNode
-visitedNodes = zeros(numTiles+5, 1); % It will be used to store visited nodes
-memoryUsage = [];
+%Find the ID number to be assigned
+if isempty(visitedNodes)
+    idAssignedLast = max(queue(numTiles+1,:));
+else
+    idAssignedLast = max([visitedNodes(numTiles+1, :) queue(numTiles+1,:)]);
+end
+idTobeAssigned = idAssignedLast + 1; % Update the id to be assigned to the next node
 
 
 % MAIN LOOP
 % Loop until the queue is empty
 % Note also that when the goal state is discovered, the loop will be terminated (by an if-statement)
+tic;
+iIteration = 0;
 while (~isempty(queue))
-    % Record the number of stored variables
-    memoryUsage = [memoryUsage; size(queue,2) + size(visitedNodes,2)];
+    
+    % If the mode is 'single_step', then stop search after one iteration
+    if strcmp(mode, 'single_step') && (iIteration == 1)
+        return;
+    end
     
     % Dequeue the node with minimum f = g + h (g:Cost, h:Heuristic), since
     % the queue is already ordered in an ascending manner:
@@ -44,15 +50,26 @@ while (~isempty(queue))
     curID = currentNode(numTiles+1);
     curCost = currentNode(numTiles+3);
     
+    % Insert currentNode in visitedNodes
+    % But, first check if it was visited before
+    if isempty(visitedNodes)
+        visitedNodes = [visitedNodes currentNode];
+    else
+        [curNodeVisited, curLoc] = ismember(curState', visitedNodes(1:numTiles, :)', 'rows');
+        if curNodeVisited
+            visitedNodes(:, curLoc) = currentNode;
+        else
+            visitedNodes = [visitedNodes currentNode];
+        end
+    end    
+    
     % When the goal state is popped out of queue than finish the search.
     if (currentNode(1:numTiles) == goalState)
-        pathToGoal = construct_path(currentNode, visitedNodes, numTiles);
-        
-        numExploredNodes = size(visitedNodes, 2) - 1;
+        timeElapsed = toc;
         return;
     end
     
-    % Find successors of the parent
+    % Find successors of the currentNode
     successorStates = successors(currentNode(1:numTiles)); % Find successors of the parent
     
     for iSuccessor = 1:size(successorStates,2)
@@ -106,14 +123,7 @@ while (~isempty(queue))
     % Sort queue with respect to f
     queue = sortrows(queue', numTiles+5)';
     
-    % Insert currentNode in visitedNodes
-    % But, first check if it was visited before
-    [curNodeVisited, curLoc] = ismember(curState', visitedNodes(1:numTiles, :)', 'rows');
-    if curNodeVisited
-        visitedNodes(:, curLoc) = currentNode;
-    else
-        visitedNodes = [visitedNodes currentNode];
-    end
+    iIteration = iIteration + 1;
 end
 
 % Issue an error, since the queue is empty and the algorith could not find a solution.

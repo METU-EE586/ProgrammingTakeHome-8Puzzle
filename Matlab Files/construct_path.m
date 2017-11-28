@@ -1,5 +1,5 @@
-function [pathToGoal] = construct_path(inpNode, visitedNodes, numTiles)
-currentNode = inpNode;
+function [pathToGoal] = construct_path(visitedNodes, numTiles)
+currentNode = visitedNodes(:, end);
 pathToGoal = [];
 
 while (currentNode(numTiles+1) ~= 1) % Until nodeID is equal to 1
