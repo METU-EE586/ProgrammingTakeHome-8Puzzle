@@ -55,8 +55,19 @@ for iDepth = minDepth:maxDepth
         % Mark currentNode as visited if appropriate
         if iIteration == 0
             visitedNodes = [visitedNodes currentNode];
-        elseif ~any(ismember(currentNode(1:numTiles)', visitedNodes(1:numTiles, :)', 'rows'))
-            visitedNodes = [visitedNodes currentNode];
+        else
+            [isVisited, loc] = ismember(currentNode(1:numTiles)', visitedNodes(1:numTiles, :)', 'rows');
+            if isVisited
+                % Compare the costs, if we just discovered a node version
+                % with lower cost
+                if visitedNodes(numTiles+3, loc) > currentNode(numTiles+3)
+                    visitedNodes(:, loc) = currentNode;
+                else
+                    % We have already discovered this node (with lower cost), do nothing.
+                end
+            else
+                visitedNodes = [visitedNodes currentNode];
+            end
         end
         
         % When the algorithm reaches the goal state, return
@@ -79,11 +90,19 @@ for iDepth = minDepth:maxDepth
             for iSucc = 1: size(successorStates, 2)
                 succState = successorStates(:, iSucc);
                 
-                if any(ismember(succState', visitedNodes(1:numTiles, :)', 'rows'))
-                    continue;
+                [isSuccVisited, loc] = ismember(succState', visitedNodes(1:numTiles, :)', 'rows');
+                
+                succCost = currentCost + 1;
+                if isSuccVisited
+                    if visitedNodes(numTiles+3, loc) > succCost
+                        % Do nothing this successor nedds to be processed
+                        % again
+                    else
+                        continue;
+                    end
                 end
                 
-                succNode = [succState; idTobeAssigned; currentID; currentCost+1] ; % Construct the node
+                succNode = [succState; idTobeAssigned; currentID; succCost] ; % Construct the node
                 idTobeAssigned = idTobeAssigned + 1; % Update the id to be assigned to the next node
                 
                 unvisitedSuccExists = 1; % Update the flag

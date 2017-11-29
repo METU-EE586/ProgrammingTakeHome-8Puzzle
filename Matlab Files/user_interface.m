@@ -485,8 +485,9 @@ numIterations = handles.numIterations;
 
 if isempty(visitedNodes)    
     queue_stack = startNode; % Enqueue startNode
+elseif all(queue_stack(1:numTiles,1) == goalState)    
+    return;
 end
-
 
 % Iterate the search algorithm one step then return outputs
 numIterations = numIterations + 1;
@@ -502,8 +503,8 @@ switch searchMethod
 end
 
 % Print current state
-
-
+currentState = queue_stack(1:numTiles, 1);
+printPuzzle(hObject, handles, currentState);
 
 % Print # of iterations and allocated memory
 curAllocMemory = size(visitedNodes, 2) + size(queue_stack,2);
@@ -787,9 +788,8 @@ if isempty(visitedNodes)
 end
 
 % Print current state
-
-
-
+currentState = queue_stack(1:numTiles, 1);
+printPuzzle(hObject, handles, currentState);
 
 while ~all((queue_stack(1:numTiles, 1) == goalState))
     numIterations = numIterations + 1;
@@ -806,6 +806,8 @@ while ~all((queue_stack(1:numTiles, 1) == goalState))
     end
     
     % Print current state
+    currentState = queue_stack(1:numTiles, 1);
+    printPuzzle(hObject, handles, currentState);
     
     % Print # of iterations and allocated memory
     curAllocMemory = size(visitedNodes, 2) + size(queue_stack,2);
@@ -843,7 +845,6 @@ end
 guidata(hObject, handles);
 
 
-
 % --- Executes on button press in SRStopButton.
 function SRStopButton_Callback(hObject, eventdata, handles)
 % hObject    handle to SRStopButton (see GCBO)
@@ -851,7 +852,7 @@ function SRStopButton_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of SRStopButton
-
+clear_print(handles);
 
 % --- Executes on button press in SRPause.
 function SRPause_Callback(hObject, eventdata, handles)
@@ -861,6 +862,47 @@ function SRPause_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of SRPause
 
-function printPuzzle(axisHandle, currentState)
-    
+function printPuzzle(hObject, handles, currentState)
+numOfTiles = length(currentState);
+edgeLen = sqrt(numOfTiles);
 
+axes(handles.axes1);
+cla;
+legend('off');
+set(handles.axes1, 'box', 'off');
+set(handles.axes1, 'xtick',  []);
+set(handles.axes1, 'ytick',  []);
+hold on;
+
+% Draw a rectangle
+rectangle('Position',[0 0 2*edgeLen 2*edgeLen], 'Curvature', 0.1);
+axis([-0.2 2*edgeLen+0.2 -0.2 2*edgeLen+0.2]);
+
+% Draw lines
+for iLine = 1: edgeLen-1
+    line([2*iLine 2*iLine], [0 2*edgeLen]);
+    line([0 2*edgeLen], [2*iLine 2*iLine]);
+end
+
+% Put numbers on the puzzle
+iNum = 1;
+iRow = edgeLen;
+while (iRow > 0)
+    for iCol = 1:edgeLen
+        curNum = currentState(iNum);
+        iNum = iNum + 1;
+        if curNum ~= 0
+            text(2*iCol-1.1, 2*iRow-1.1, num2str(curNum),...
+            'FontWeight', 'bold', 'FontSize', 14);
+            drawnow;
+        end
+    end
+    iRow = iRow -1;
+end
+guidata(hObject, handles);
+pause(0);
+
+
+function clear_print(handles)
+axes(handles.axes1);
+cla;

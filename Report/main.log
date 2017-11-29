@@ -1,0 +1,666 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2018/dev/Debian) (preloaded format=pdflatex 2017.10.16)  29 NOV 2017 21:38
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2017-04-15>
+Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2017/06/29 3.12 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2017/06/29 3.12 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2017/06/29 3.12 Babel common definitions
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2017/06/29 3.12 Babel switching mechanism
+)
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count88
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
+))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count89
+\uc@combtoks=\toks16
+\uc@combtoksb=\toks17
+\uc@temptokena=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen104
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen105
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count90
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count91
+\leftroot@=\count92
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count93
+\DOTSCASE@=\count94
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count95
+\c@MaxMatrixCols=\count96
+\dotsspace@=\muskip11
+\c@parentequation=\count97
+\dspbrk@lvl=\count98
+\tag@help=\toks20
+\row@=\count99
+\column@=\count100
+\maxfields@=\count101
+\andhelp@=\toks21
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks22
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+(/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip48
+\f@nch@O@elh=\skip49
+\f@nch@O@erh=\skip50
+\f@nch@O@olh=\skip51
+\f@nch@O@orh=\skip52
+\f@nch@O@elf=\skip53
+\f@nch@O@erf=\skip54
+\f@nch@O@olf=\skip55
+\f@nch@O@orf=\skip56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/vmargin/vmargin.sty
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
+
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
+\PaperWidth=\dimen115
+\PaperHeight=\dimen116
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen117
+\lightrulewidth=\dimen118
+\cmidrulewidth=\dimen119
+\belowrulesep=\dimen120
+\belowbottomsep=\dimen121
+\aboverulesep=\dimen122
+\abovetopsep=\dimen123
+\cmidrulesep=\dimen124
+\cmidrulekern=\dimen125
+\defaultaddspace=\dimen126
+\@cmidla=\count102
+\@cmidlb=\count103
+\@aboverulesep=\dimen127
+\@belowrulesep=\dimen128
+\@thisruleclass=\count104
+\@lastruleclass=\count105
+\@thisrulewidth=\dimen129
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen130
+\Hy@linkcounter=\count106
+\Hy@pagecounter=\count107
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count108
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4498.
+Package hyperref Info: Link nesting OFF on input line 4503.
+Package hyperref Info: Hyper index ON on input line 4506.
+Package hyperref Info: Plain pages OFF on input line 4513.
+Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4751.
+\c@Hy@tempcnt=\count109
+LaTeX Info: Redefining \url on input line 5104.
+\XeTeXLinkMargin=\dimen131
+\Fld@menulength=\count110
+\Field@Width=\dimen132
+\Fld@charsize=\dimen133
+Package hyperref Info: Hyper figures OFF on input line 6358.
+Package hyperref Info: Link nesting OFF on input line 6363.
+Package hyperref Info: Hyper index ON on input line 6366.
+Package hyperref Info: backreferencing OFF on input line 6373.
+Package hyperref Info: Link coloring OFF on input line 6378.
+Package hyperref Info: Link coloring with OCG OFF on input line 6383.
+Package hyperref Info: PDF/A mode OFF on input line 6388.
+LaTeX Info: Redefining \ref on input line 6428.
+LaTeX Info: Redefining \pageref on input line 6432.
+\Hy@abspage=\count111
+\c@Item=\count112
+\c@Hfootnote=\count113
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+\Fld@listcount=\count114
+\c@bookmark@seq@number=\count115
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count116
+\lst@gtempboxa=\box28
+\lst@token=\toks25
+\lst@length=\count117
+\lst@currlwidth=\dimen134
+\lst@column=\count118
+\lst@pos=\count119
+\lst@lostspace=\dimen135
+\lst@width=\dimen136
+\lst@newlines=\count120
+\lst@lineno=\count121
+\lst@maxwidth=\dimen137
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count122
+\lst@skipnumbers=\count123
+\lst@framebox=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+) (./main.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+ (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen138
+\scratchbox=\box30
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen139
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks27
+)
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 44.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count130
+)
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
+
+(./main.out) (./main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+\c@lstlisting=\count131
+<images/odtuLogo.png, id=8, 330.23375pt x 287.0725pt>
+File: images/odtuLogo.png Graphic file (type png)
+<use images/odtuLogo.png>
+Package pdftex.def Info: images/odtuLogo.png  used on input line 51. on input l
+ine 51.
+Package pdftex.def Info: Requested size: 99.07088pt x 86.1224pt on input line 5
+1.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/odtuLogo.png>]
+<images/NodeDefinition.png, id=21, 492.84125pt x 125.46875pt>
+File: images/NodeDefinition.png Graphic file (type png)
+<use images/NodeDefinition.png>
+Package pdftex.def Info: images/NodeDefinition.png  used on input line 103. on 
+input line 103.
+Package pdftex.def Info: Requested size: 299.20076pt x 76.17397pt on input line
+ 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.123 		\end{itemize}
+                      [1 <./images/NodeDefinition.png>]
+<images/UI_snapshot1.png, id=32, 1363.0925pt x 619.31375pt>
+File: images/UI_snapshot1.png Graphic file (type png)
+<use images/UI_snapshot1.png>
+Package pdftex.def Info: images/UI_snapshot1.png  used on input line 127. on in
+put line 127.
+Package pdftex.def Info: Requested size: 427.43153pt x 194.19656pt on input lin
+e 127.
+<images/UI_snapshot2.png, id=33, 1372.12625pt x 650.43pt>
+File: images/UI_snapshot2.png Graphic file (type png)
+<use images/UI_snapshot2.png>
+Package pdftex.def Info: images/UI_snapshot2.png  used on input line 135. on in
+put line 135.
+Package pdftex.def Info: Requested size: 427.43153pt x 202.61375pt on input lin
+e 135.
+<images/InitialState.png, id=35, 327.2225pt x 326.21875pt>
+File: images/InitialState.png Graphic file (type png)
+<use images/InitialState.png>
+Package pdftex.def Info: images/InitialState.png  used on input line 147. on in
+put line 147.
+Package pdftex.def Info: Requested size: 106.85788pt x 106.52756pt on input lin
+e 147.
+ [2 <./images/UI_snapshot1.png> <./images/UI_snapshot2.png>] [3 <./images/Initi
+alState.png>] [4]
+Package epstopdf Info: Source file: <images/Q8_numMoves.eps>
+(epstopdf)                    date: 2017-11-29 11:27:42
+(epstopdf)                    size: 19353 bytes
+(epstopdf)             Output file: <images/Q8_numMoves-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-29 11:48:01
+(epstopdf)                    size: 10619 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Q8_numMoves-eps-con
+verted-to.pdf images/Q8_numMoves.eps>
+(epstopdf)             \includegraphics on input line 223.
+Package epstopdf Info: Output file is already uptodate.
+<images/Q8_numMoves-eps-converted-to.pdf, id=67, pagebox=cropbox, 751.80875pt x
+ 522.95375pt>
+File: images/Q8_numMoves-eps-converted-to.pdf Graphic file (type pdf)
+<use images/Q8_numMoves-eps-converted-to.pdf>
+Package pdftex.def Info: images/Q8_numMoves-eps-converted-to.pdf  used on input
+ line 223. on input line 223.
+Package pdftex.def Info: Requested size: 427.43153pt x 297.32866pt on input lin
+e 223.
+Package epstopdf Info: Source file: <images/Q8_numVisitedNodes.eps>
+(epstopdf)                    date: 2017-11-29 11:30:41
+(epstopdf)                    size: 20342 bytes
+(epstopdf)             Output file: <images/Q8_numVisitedNodes-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-11-29 11:49:15
+(epstopdf)                    size: 10706 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Q8_numVisitedNodes-
+eps-converted-to.pdf images/Q8_numVisitedNodes.eps>
+(epstopdf)             \includegraphics on input line 230.
+Package epstopdf Info: Output file is already uptodate.
+<images/Q8_numVisitedNodes-eps-converted-to.pdf, id=68, pagebox=cropbox, 737.75
+626pt x 498.86375pt>
+File: images/Q8_numVisitedNodes-eps-converted-to.pdf Graphic file (type pdf)
+<use images/Q8_numVisitedNodes-eps-converted-to.pdf>
+Package pdftex.def Info: images/Q8_numVisitedNodes-eps-converted-to.pdf  used o
+n input line 230. on input line 230.
+Package pdftex.def Info: Requested size: 384.68576pt x 260.11856pt on input lin
+e 230.
+Package epstopdf Info: Source file: <images/Q8_allocatedMemory.eps>
+(epstopdf)                    date: 2017-11-29 11:32:19
+(epstopdf)                    size: 21526 bytes
+(epstopdf)             Output file: <images/Q8_allocatedMemory-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2017-11-29 11:49:42
+(epstopdf)                    size: 11229 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Q8_allocatedMemory-
+eps-converted-to.pdf images/Q8_allocatedMemory.eps>
+(epstopdf)             \includegraphics on input line 237.
+Package epstopdf Info: Output file is already uptodate.
+<images/Q8_allocatedMemory-eps-converted-to.pdf, id=69, pagebox=cropbox, 780.91
+75pt x 532.99126pt>
+File: images/Q8_allocatedMemory-eps-converted-to.pdf Graphic file (type pdf)
+<use images/Q8_allocatedMemory-eps-converted-to.pdf>
+Package pdftex.def Info: images/Q8_allocatedMemory-eps-converted-to.pdf  used o
+n input line 237. on input line 237.
+Package pdftex.def Info: Requested size: 384.68576pt x 262.55057pt on input lin
+e 237.
+Package epstopdf Info: Source file: <images/Q8_timeElapsed.eps>
+(epstopdf)                    date: 2017-11-29 11:44:18
+(epstopdf)                    size: 174730 bytes
+(epstopdf)             Output file: <images/Q8_timeElapsed-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-11-29 11:50:05
+(epstopdf)                    size: 95283 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Q8_timeElapsed-eps-
+converted-to.pdf images/Q8_timeElapsed.eps>
+(epstopdf)             \includegraphics on input line 244.
+Package epstopdf Info: Output file is already uptodate.
+<images/Q8_timeElapsed-eps-converted-to.pdf, id=70, pagebox=cropbox, 1024.82875
+pt x 571.13374pt>
+File: images/Q8_timeElapsed-eps-converted-to.pdf Graphic file (type pdf)
+<use images/Q8_timeElapsed-eps-converted-to.pdf>
+Package pdftex.def Info: images/Q8_timeElapsed-eps-converted-to.pdf  used on in
+put line 244. on input line 244.
+Package pdftex.def Info: Requested size: 341.94652pt x 190.56627pt on input lin
+e 244.
+Package epstopdf Info: Source file: <images/Q9.eps>
+(epstopdf)                    date: 2017-11-29 13:35:27
+(epstopdf)                    size: 36521 bytes
+(epstopdf)             Output file: <images/Q9-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-29 13:35:29
+(epstopdf)                    size: 12898 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Q9-eps-converted-to
+.pdf images/Q9.eps>
+(epstopdf)             \includegraphics on input line 261.
+Package epstopdf Info: Output file is already uptodate.
+<images/Q9-eps-converted-to.pdf, id=72, pagebox=cropbox, 586.19pt x 569.12625pt
+>
+File: images/Q9-eps-converted-to.pdf Graphic file (type pdf)
+<use images/Q9-eps-converted-to.pdf>
+Package pdftex.def Info: images/Q9-eps-converted-to.pdf  used on input line 261
+. on input line 261.
+Package pdftex.def Info: Requested size: 341.94652pt x 331.9866pt on input line
+ 261.
+<images/Code_successors.pdf, id=73, pagebox=cropbox, 614.295pt x 794.97pt>
+File: images/Code_successors.pdf Graphic file (type pdf)
+<use images/Code_successors.pdf>
+Package pdftex.def Info: images/Code_successors.pdf  used on input line 272. on
+ input line 272.
+Package pdftex.def Info: Requested size: 427.43153pt x 553.15152pt on input lin
+e 272.
+<images/Code_breadth_first_search.pdf, id=74, pagebox=cropbox, 614.295pt x 794.
+97pt>
+File: images/Code_breadth_first_search.pdf Graphic file (type pdf)
+<use images/Code_breadth_first_search.pdf>
+Package pdftex.def Info: images/Code_breadth_first_search.pdf  used on input li
+ne 279. on input line 279.
+Package pdftex.def Info: Requested size: 427.43153pt x 553.15152pt on input lin
+e 279.
+<images/Code_depth_first_search.pdf, id=75, pagebox=cropbox, 614.295pt x 794.97
+pt>
+File: images/Code_depth_first_search.pdf Graphic file (type pdf)
+<use images/Code_depth_first_search.pdf>
+Package pdftex.def Info: images/Code_depth_first_search.pdf  used on input line
+ 286. on input line 286.
+Package pdftex.def Info: Requested size: 427.43153pt x 553.15152pt on input lin
+e 286.
+<images/Code_iterative_deepening_search.pdf, id=76, pagebox=cropbox, 614.295pt 
+x 794.97pt>
+File: images/Code_iterative_deepening_search.pdf Graphic file (type pdf)
+<use images/Code_iterative_deepening_search.pdf>
+Package pdftex.def Info: images/Code_iterative_deepening_search.pdf  used on in
+put line 293. on input line 293.
+Package pdftex.def Info: Requested size: 427.43153pt x 553.15152pt on input lin
+e 293.
+<images/Code_a_star_search.pdf, id=77, pagebox=cropbox, 614.295pt x 794.97pt>
+File: images/Code_a_star_search.pdf Graphic file (type pdf)
+<use images/Code_a_star_search.pdf>
+Package pdftex.def Info: images/Code_a_star_search.pdf  used on input line 300.
+ on input line 300.
+Package pdftex.def Info: Requested size: 427.43153pt x 553.15152pt on input lin
+e 300.
+<images/Code_produce_random_puzzle.pdf, id=78, pagebox=cropbox, 614.295pt x 794
+.97pt>
+File: images/Code_produce_random_puzzle.pdf Graphic file (type pdf)
+<use images/Code_produce_random_puzzle.pdf>
+Package pdftex.def Info: images/Code_produce_random_puzzle.pdf  used on input l
+ine 307. on input line 307.
+Package pdftex.def Info: Requested size: 427.43153pt x 553.15152pt on input lin
+e 307.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 317.
+
+[5 <./images/Q8_numMoves-eps-converted-to.pdf>] [6 <./images/Q8_numVisitedNodes
+-eps-converted-to.pdf> <./images/Q8_allocatedMemory-eps-converted-to.pdf>]
+[7 <./images/Q8_timeElapsed-eps-converted-to.pdf> <./images/Q9-eps-converted-to
+.pdf>] [8 <./images/Code_successors.pdf>] [9 <./images/Code_breadth_first_searc
+h.pdf>] [10 <./images/Code_depth_first_search.pdf>] [11 <./images/Code_iterativ
+e_deepening_search.pdf>] [12 <./images/Code_a_star_search.pdf>] [13 <./images/C
+ode_produce_random_puzzle.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 317.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 317.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 76608FB0E9270C46E490C6170EAE05DC;42.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 317.
+ ) 
+Here is how much of TeX's memory you used:
+ 8424 strings out of 492990
+ 122739 string characters out of 6134996
+ 227854 words of memory out of 5000000
+ 11823 multiletter control sequences out of 15000+600000
+ 10765 words of font info for 38 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 29i,11n,43p,324b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (14 pages, 330844 bytes).
+PDF statistics:
+ 236 PDF objects out of 1000 (max. 8388607)
+ 180 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+
